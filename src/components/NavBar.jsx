@@ -28,6 +28,9 @@ function Navbar() {
         </button>
         
         <div className="collapse navbar-collapse" id="navbarNav">
+        <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
+            </li>
           <ul className="navbar-nav ms-auto"> {/* Use ms-auto to align items to the right */}
             {isLoggedIn ? (
               // If the user is logged in, show the Logout option

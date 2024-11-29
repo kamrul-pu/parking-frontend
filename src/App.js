@@ -1,26 +1,27 @@
-import './App.css';
-import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
-import { useSelector } from 'react-redux';
-import Layout from './pages/Layout';
-import Home from './pages/Home';
-import About from './pages/About';
-import LoginReg from './pages/auth/LoginReg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register';
+import Home from './components/Home';
+import Navbar from './components/NavBar';
+import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const { access_token } = useSelector(state => state.auth)
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="login" element={!access_token ? <LoginReg /> : <Navigate to="/" />} />
-          </Route>
-          <Route path="*" element={<h1>404 Not Found</h1>} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <Router>
+      <div className="d-flex flex-column min-vh-100 mb-5">
+        <Navbar />
+        <div className="container flex-grow-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

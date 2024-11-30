@@ -22,15 +22,12 @@ function Navbar() {
       <div className="container-fluid">
         {/* Home Link stays left */}
         <Link className="navbar-brand" to="/">Parking Finder</Link>
-        
+        <Link className="nav-link" to="/">Home</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         
         <div className="collapse navbar-collapse" id="navbarNav">
-        <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
-            </li>
           <ul className="navbar-nav ms-auto"> {/* Use ms-auto to align items to the right */}
             {isLoggedIn ? (
               // If the user is logged in, show the Logout option

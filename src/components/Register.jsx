@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { API_BASE_URL } from '../config';
 
 function Register() {
   const [firstName, setFirstName] = useState('');
@@ -36,7 +37,7 @@ function Register() {
 
     try {
       // Make the API call to register the user
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/users/register', formData, {
+      const response = await axios.post(`${API_BASE_URL}/users/register`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data', // Ensures the request sends as form-data
         },

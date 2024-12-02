@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../config';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -16,7 +17,7 @@ function Login() {
     setError(''); // Reset any previous error message
 
     // API endpoint for login
-    const url = 'http://127.0.0.1:8000/api/v1/token';
+    const url = `${API_BASE_URL}/token`;
 
     try {
       // Make the POST request to get tokens

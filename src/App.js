@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Navbar from './components/NavBar';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Parking from './components/Parking';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/parkings" element={<Parking />} />
           </Routes>
         </div>
         <Footer />

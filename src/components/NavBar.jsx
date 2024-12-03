@@ -41,21 +41,26 @@ function Navbar() {
                 <Link className="nav-link" to="/parkings">Parkings</Link>
             </li>
             {isLoggedIn ? (
-              // If the user is logged in, show the Logout option
-              <li className="nav-item">
-                <button className="nav-link btn btn-link" onClick={handleLogout}>Logout</button>
-              </li>
-            ) : (
-              // If the user is not logged in, show Login and Register options
-              <>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/login">Login</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/register">Register</Link>
-                </li>
-              </>
-            )}
+          // If the user is logged in, show the Logout option
+          <>
+            <li className="nav-item">
+              <Link className="nav-link" to="/my-parkings">My Parkings</Link>
+            </li>
+            <li className="nav-item">
+              <button className="nav-link btn btn-link" onClick={handleLogout}>Logout</button>
+            </li>
+          </>
+        ) : (
+          // If the user is not logged in, show Login and Register options
+          <>
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">Login</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/register">Register</Link>
+            </li>
+          </>
+        )}
             
           </ul>
         </div>

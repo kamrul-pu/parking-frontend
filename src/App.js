@@ -7,6 +7,7 @@ import Navbar from './components/NavBar';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Parking from './components/Parking';
+import ParkingHistory from './components/ParkingHistory';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/parkings" element={<Parking />} />
+            <Route path="/my-parkings" element={< ParkingHistory/>}/>
           </Routes>
         </div>
         <Footer />

@@ -183,7 +183,12 @@ function ParkingList() {
                   <strong>Rate:</strong> ${parking.rate}<br />
                   <strong>Capacity:</strong> {parking.capacity}<br />
                   <strong>Occupied:</strong> {parking.occupied}<br />
-                  <strong>Remaining:</strong> {parking.capacity - parking.occupied}
+                  <strong>Remaining:</strong> {parking.capacity - parking.occupied}<br/>
+                  {parking.distance && (
+                    <>
+                      <strong> Distance: </strong> {parking.distance} Meters
+                    </>
+                  )}
                 </p>
               </div>
             </div>

@@ -44,7 +44,7 @@ const ParkingHistory = () => {
       ) : (
         // If data is fetched, display the parking data in a table
         <>
-          {parkingData.length === 0 ? (
+          {parkingData && parkingData.length === 0 ? (
             <p>No parking records found.</p>
           ) : (
             <table className="table table-striped">

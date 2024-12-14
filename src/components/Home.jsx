@@ -16,7 +16,7 @@ function Home() {
   };
   return (
     <div className="container mt-5">
-      <section className="hero bg-primary text-white text-center py-5">
+      <section className="hero text-white text-center py-5" style={{ background: 'linear-gradient(to right, #6a11cb, #2575fc)' }}>
         <Container>
           <h1 className="display-4 font-weight-bold">Find Parking Fast and Easy</h1>
           <p className="lead">Get real-time information on available parking spots near you in just a few clicks.</p>

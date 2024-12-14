@@ -60,7 +60,7 @@ const ParkingHistory = () => {
                 </tr>
               </thead>
               <tbody>
-                {parkingData.map((parking, index) => (
+                {parkingData && parkingData.map((parking, index) => (
                   <tr key={index}>
                     <td>{parking.user}</td>
                     <td>{parking.vehicle_number}</td>

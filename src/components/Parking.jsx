@@ -29,7 +29,7 @@ function ParkingList() {
 
       const response = await axios.get(url);
       setParkings(response.data.results);
-      setTotalCount(response.data.total_count);  // Set the total count from the response
+      setTotalCount(response.data.count);  // Set the total count from the response
     } catch (error) {
       console.error("There was an error fetching the parkings!", error);
     } finally {
@@ -153,6 +153,7 @@ function ParkingList() {
             value={pageSize}
             onChange={handlePageSizeChange}
           >
+            <option value={5}>5 items per page</option>
             <option value={10}>10 items per page</option>
             <option value={20}>20 items per page</option>
             <option value={50}>50 items per page</option>
